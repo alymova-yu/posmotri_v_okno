@@ -12,6 +12,7 @@ html {
 }
 
 .page {
+  margin: 0;
   inline-size: 1200px;
   block-size: 100%;
   color: #fff;
@@ -43,17 +44,16 @@ ol {
 
 .content {
   box-sizing: border-box;
+  margin: auto 30px;
   position: relative;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 711px auto;
-  gap: 26px;
+  display: flex;
   align-items: end;
 }
 
 .result {
   width: 100%;
-  margin: 0 0 0 6px;
+  margin-bottom: 1px;
+  margin-right: 32px;
  
 }
 
@@ -76,7 +76,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 10px;
 }
 
 .title {
@@ -86,7 +85,7 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
 }
 
@@ -169,22 +168,19 @@ ol {
   height: 103px;
   object-fit: contain;
   object-position: center center;
-  margin: 1px 0;
+  margin: 1px 2px 0 0;
 }
 
 .search-form {
+  width: 711px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-
   color: #FFF;
-
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
 }
 
 .search-form__fieldset {
@@ -256,7 +252,6 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  flex-direction: row;
 }
 
 .search-form__checkbox-list .search-form__label {
@@ -269,9 +264,11 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
   margin-right: 5px;
   vertical-align: middle;
   background-color: transparent;
@@ -282,10 +279,9 @@ ol {
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   background: #fff;
-  margin: 1px;
 }
 
 .search-form__label-text {
@@ -340,7 +336,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .more-button {
-  width: 100%;
-  margin-top: 28px;
-  margin-bottom: 2px;
+  width: 99%;
+  margin: 28px 0 2px 0;
 }
