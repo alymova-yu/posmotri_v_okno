@@ -69,14 +69,20 @@ ol {
 .result__video-container {
   position: relative;
   box-sizing: border-box;
-  margin-bottom: 16px;
-  width: 100%;
-  height: 386px;
-  overflow: hidden;
+  margin-bottom: 12px;
+  
+  
+  
 }
 
 .result__video {
   width: 100%;
+  height: 386px;
+  object-fit: cover;
+  object-position: bottom;
+
+  
+  
 }
 
 .content__details {
@@ -113,8 +119,13 @@ ol {
   display: flex;
   flex-direction: column;
   width: 399px;
-  margin-bottom: 28px;
+  margin-top: 28px;
 }
+
+.content__list-item:first-child {
+  margin-top: 0;
+}
+
 
 .content__card-link {
   margin: 2px;
@@ -166,7 +177,7 @@ ol {
   font-weight: 400;
   line-height: 90%;
   height: 65px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .content__video-card-thumbnail {
@@ -191,6 +202,19 @@ ol {
   width: fit-content;
   display: flex;
   align-items: center;
+}
+
+.search-form__label:has(input:focus) {
+  outline: none;
+}
+
+.search-form__label:has(input:focus-visible) {
+  outline: solid #fff 1px;
+  outline-offset: 1px;
+}
+
+.search-form__label:has(input:active) {
+  outline: none;
 }
 
 .search-form__fieldset-title {
@@ -231,21 +255,8 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus-visible {
-  outline: none;
-}
-
 .search-form__textfield:active {
   border: solid #fff 1px;
-}
-
-.search-form__label:has(input:focus-visible) {
-  outline: solid #fff 1px;
-  outline-offset: 1px;
-}
-
-.search-form__label:has(input:active) {
-  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -275,11 +286,9 @@ ol {
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   content: "";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
   background: #fff;
   margin: 1px;
 }
@@ -311,18 +320,20 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   cursor: pointer;
 }
 
+.button:focus {
+  outline: solid 1px #fff;
+  outline-offset: 1px;
+}
+
 .button:hover {
   text-decoration: underline;
 }
 
 .button:active {
+  outline: none;
   background-color: #545050;
 }
 
-.button:focus {
-  outline: solid 1px #fff;
-  outline-offset: 1px;
-}
 
 .search-form__submit-button {
   width: 194px;
@@ -331,4 +342,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .more-button {
   width: 399px;
+  margin-top: 28px;
+  margin-bottom: 2px;
 }
