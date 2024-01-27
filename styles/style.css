@@ -86,7 +86,6 @@ ol {
   line-height: 94%;
   text-transform: uppercase;
   margin-bottom: 24px;
-
 }
 
 .content__accent {
@@ -97,6 +96,7 @@ ol {
   position: relative;
   height: 298px;
   overflow-y: auto;
+  padding-left: 2px;
 }
 
 .content__list-item {
@@ -111,31 +111,37 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   width: 100%;
   margin: 2px 0;
   text-decoration: none;
   color: #fff;
 }
 
+.content__card-link:focus {
+  outline: transparent;
+}
+
+
 .content__card-link:hover .content__video-card-description-container {
   text-decoration: underline 1px;
   text-underline-offset: 3px;
 }
 
-.content__card-link:active .content__video-card {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible .content__video-card {
+  outline: solid 1px #fff;
+}
+
+.content__card-link:active {
   background-color: #545050;
 }
 
 .content__card-link:active .content__video-card-description-container {
   text-decoration: none;
-}
-
-.content__card-link:focus {
-  outline: none;
-}
-
-.content__card-link:focus .content__video-card {
-  outline: solid 1px #fff;
 }
 
 .content__video-card {
@@ -168,7 +174,7 @@ ol {
   height: 103px;
   object-fit: contain;
   object-position: center center;
-  margin: 1px 2px 0 0;
+  margin: 0 2px 0 0;
 }
 
 .search-form {
@@ -322,11 +328,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .button:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .button:active {
   outline: none;
   background-color: #545050;
+  text-decoration: none;
 }
 
 
